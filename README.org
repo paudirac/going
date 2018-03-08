@@ -23,5 +23,45 @@
 
 ** Numbers
 
+** Data
+
+   Allocation primitives ~new~ and ~make~.
+
+   ~new~ initializes everything to ~0~, so the convention is to
+   use meaningfull zero values for the structs.
+
+   For non zero values use the ~{values...}~ syntax, like in:
+#+BEGIN_SRC go
+File{fd,name, nil, 0} // or
+Fild{name: name, fd: fd}
+#+END_SRC
+
+*** Arrays 
+    The length of the array is part of the array definition.
+    Is checked at compile time.
+
+    #+BEGIN_SRC go
+var array [14]int
+array[7] = 42
+    #+END_SRC
+
+    Arrays are passed by value to functions. (Concurrency in mind. Don't use them.)
+
+*** Slices
+
+    Don't have fixed size, and can be shared by reference.
+    #+BEGIN_SRC go
+    letters := []string{"a", "b", "c", "d"}
+    #+END_SRC
+
+    To initialize it, use ~make~, with size & capacity:
+    #+BEGIN_SRC go
+    var s []byte
+    s = make([]byte, 5, 5)
+    #+END_SRC
+
+
+
+
 
    
