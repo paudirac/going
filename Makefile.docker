@@ -6,6 +6,6 @@ test: build-image
 	docker run --rm $(IMAGE) make -f Makefile test
 
 shell: build-image
-	docker run --rm -it $(IMAGE) bash
+	docker run --rm -it -v $(PWD):/go $(IMAGE) bash
 
 .PHONY: build-image test dist
