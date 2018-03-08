@@ -1,0 +1,27 @@
+#+TITLE: Meetup Go CAPSiDE
+#+DATE: <2018-03-08 Tue>
+#+AUTHOR: paudirac
+#+EMAIL: pau.cervera@capside.com
+
+* Go introduction
+** Types
+** Strings & unicode
+** Pointers
+   As in C
+   #+BEGIN_SRC go
+   var p *int
+   #+END_SRC
+   #+BEGIN_SRC go
+   int i = 42;
+   p := &i;
+   fmt.Println(*p)
+   #+END_SRC
+
+   Para más info, ver [[w3m:https://play.golang.org/p/kL-ug4Hl1jx][Pointers in go]] 
+
+** Constants
+
+** Numbers
+
+
+   
